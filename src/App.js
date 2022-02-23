@@ -1,10 +1,16 @@
+import styled from 'styled-components'
 
+const S = {}
+
+S.App = styled.div`
+
+`;
 
 function App() {
   return (
-    <div className="App">
-        
-    </div>
+    <S.App>
+      
+    </S.App>
   );
 }
 
