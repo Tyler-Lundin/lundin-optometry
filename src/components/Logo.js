@@ -19,7 +19,7 @@ export default Logo
 const S = {}
 
 S.LogoContainer = styled.div`
-    font-family: 'le havre';
+    font-family: 'le-havre';
     text-align: center;
     display: grid;
     justify-items: center;
