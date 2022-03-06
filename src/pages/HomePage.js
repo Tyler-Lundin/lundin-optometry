@@ -5,7 +5,22 @@ import C from './../util/colors'
 import AboutUs from './AboutUs'
 import Information from './Information'
 import ContactUs from './ContactUs'
+import { analytics } from '../util/firebase'
+import { logEvent } from 'firebase/analytics'
 const HomePage = () => {
+
+  const handleScheduleExam = () => {
+    window.open('https://drbrucelundin.itrust.io/appointment')
+    logEvent(analytics, 'cta_schedule_exam')
+  }
+  const handleDirections = () => {
+    window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')
+    logEvent(analytics, 'cta_directions')
+  }
+  const handleCallUs = () => {
+    logEvent(analytics, 'cta_call_us')
+  }
+
   return (
     <>
       {/* HERO */}
@@ -17,9 +32,9 @@ const HomePage = () => {
           </div>
           
           <S.CTAs>
-            <S.CTA onClick={() => window.open('https://drbrucelundin.itrust.io/appointment')}>SCHEDULE EXAM</S.CTA>
-            <S.CTA onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}>DIRECTIONS</S.CTA>
-            <S.AnchorCTA href='tel:5094590619'>CALL US</S.AnchorCTA>
+            <S.CTA onClick={handleScheduleExam}>SCHEDULE EXAM</S.CTA>
+            <S.CTA onClick={handleDirections}>DIRECTIONS</S.CTA>
+            <S.AnchorCTA href='tel:5094590619' onClick={handleCallUs}>CALL US</S.AnchorCTA>
           </S.CTAs>
           <S.SmallMessage>Inside the Walmart Vision Center</S.SmallMessage>
         </S.Hero>

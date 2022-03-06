@@ -19,12 +19,7 @@ const Information = () => {
                         <S.ListItem>AETNA</S.ListItem>
                         <S.ListItem>LOREM</S.ListItem>
                         <S.ListItem>IPSUM</S.ListItem>
-                        <S.ListItem>THORO</S.ListItem>
-                        <S.ListItem>FREYA</S.ListItem>
-                        <S.ListItem>FLOKI</S.ListItem>
-                        <S.ListItem>ALICER</S.ListItem>
-                        <S.ListItem>COUNTRY</S.ListItem>
-                        <S.ListItem>SOMTIN</S.ListItem>
+                   
                     </S.List>
                 </S.Section>
                 <S.Section>
@@ -50,23 +45,23 @@ const Information = () => {
                 <S.Section1 dark={true}>
                     <S.Rows>
                         <S.Row>
-                            <S.RowTitle>Eye Exam</S.RowTitle>
+                            <S.RowTitle>Glasses Eye Exam</S.RowTitle>
                             $100.00
                             {/* | description of servicedescription of service | FOR GLASSES  */}
                         </S.Row>
                         <S.Row>
                             <S.RowTitle>Contact Fitting Spherical</S.RowTitle>
-                            $150.00
+                            +$50.00
                             {/* | description of service | FOR CONTACT LENS and GLASSES */}
                         </S.Row>
                         <S.Row>
                             <S.RowTitle>Contact Fitting Astigmatism / Bifocal</S.RowTitle>
-                            $170.00
+                            +$70.00
                             {/* | ROUTINE EYE EXAM | FOR SPECIAL CONTACT LENS and GLASSES */}
                         </S.Row>
                         <S.Row>
                             <S.RowTitle>Contact Fitting RGP</S.RowTitle>
-                            $200.00
+                            +$100.00
                             {/* | ROUTINE EYE EXAM | FOR SPECIAL CONTACT LENS and GLASSES */}
                         </S.Row>
                     </S.Rows>
