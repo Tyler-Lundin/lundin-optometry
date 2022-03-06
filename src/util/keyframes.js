@@ -1,7 +1,7 @@
 import { keyframes } from "styled-components";
 
 
-export const infoHover = keyframes`
+export const fadeIn = keyframes`
     from {
         opacity: 0;
     }

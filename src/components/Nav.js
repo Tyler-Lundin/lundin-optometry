@@ -1,23 +1,18 @@
 import styled, {keyframes} from 'styled-components'
 import {IoIosMenu, IoIosClose} from 'react-icons/io'
 import { useState } from 'react'
-import C from '../colors' // colors
+import C from './../util/colors'
 
 const Nav = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(true)
     function handleToggle() {
         setIsMenuOpen(!isMenuOpen)
-        isMenuOpen ? handleOpenNav() : handleCloseNav()
-        console.log(isMenuOpen)
     }
-    function handleOpenNav() {
-
-    }
-    function handleCloseNav() {
-
+    const handleLink = () => {
+        setIsMenuOpen(!isMenuOpen)
     }
   return (
-    <>
+    <S.NavContainer isMenuOpen={isMenuOpen}>
         <S.ToggleOpen onClick={()=>handleToggle()}>
                 <IoIosMenu size={'100%'}/>
         </S.ToggleOpen>
@@ -26,13 +21,24 @@ const Nav = () => {
                 <IoIosClose size={'100%'} color='white'/>
             </S.ToggleOpen>
             <S.LinksContainer>
-                <S.Link>HOME</S.Link>
-                <S.Link>SCHEDULE VISIT</S.Link>
-                <S.Link>CONTACT US</S.Link>
-                <S.Link>ABOUT US</S.Link>
+                <S.ListItem>
+                    <a href='#HomePage' onClick={handleLink}>HOME</a>
+                </S.ListItem>
+
+                <S.ListItem>
+                <span onClick={()=>window.open('https://drbrucelundin.itrust.io/appointment')}>SCHEDULE VISIT</span>
+                </S.ListItem>
+
+                <S.ListItem>
+                    <a href='#ContactUs' onClick={handleLink}>CONTACT US</a>
+                </S.ListItem>
+
+                <S.ListItem>
+                    <a href='#AboutUs' onClick={handleLink}>ABOUT US</a>
+                </S.ListItem>
             </S.LinksContainer>
         </S.Nav>
-    </>
+    </S.NavContainer>
   )
 }
 
@@ -64,30 +70,32 @@ S.Nav = styled.div`
     height: 100vh;
     background: ${C.Secondary};
     color: ${C.Primary};
-    animation: ${props=>props.isMenuOpen?closeNav:openNav} 1s normal forwards;
-    position: absolute;
+    position: fixed;
     z-index: 100;
+    animation: ${props=>props.isMenuOpen?closeNav:openNav} 1s normal forwards;
 `
 S.ToggleOpen = styled.div`
     width: ${toggleSize};
     height: ${toggleSize};
-    position: absolute;
+    position: fixed;
     top: ${togglePadding};
     right: ${togglePadding};
+    z-index: 100;
+
 `
 S.LinksContainer = styled.ul`
-    height: 100%;
+    height: 90%;
     display: grid;
     font-family: 'Le Havre';
     align-items: center;
     @media (max-width: 480px) { /* phone */
-        font-size: 6vh;
+        font-size: 3vh;
     }
     @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 6vh;
+        font-size: 4vh;
     }
     @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
-        font-size: 6vh;
+        font-size: 5vh;
     }
     @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
         font-size: 6vh;
@@ -96,32 +104,37 @@ S.LinksContainer = styled.ul`
         font-size: 6vh;
     }
 `
-S.Link = styled.li`
+S.ListItem = styled.li`
     text-align:center ;
+    a {
+        all: unset;
+    }
+    ::before {
+        content: '→';
+        color: ${C.Primary};
+        position: relative;
+        z-index: 200;
+        position: absolute;
+        transform: translateX(-110%);
+        opacity: 0;
+        transition: 250ms;
+    }
+    ::after {
+        content: '←';
+        color: ${C.Primary};
+        position: relative;
+        z-index: 200;
+        position: absolute;
+        transform: translateX(10%);
+        opacity: 0;
+        transition: 250ms;
+    }
+    :hover {
+        ::before, ::after {
+            opacity: 1;
+        }
+    }
 `
-// DESKTOP DESIGN
-// S.Nav = styled.div`
-//     width: 100vw;
-//     height: ${navHeight};
-//     background: whitesmoke;
-//     position: absolute;
-// `
-// S.LinksContainer = styled.ul`
-//     height: 100%;
-//     display: grid;
-//     grid-auto-flow: column;
-//     list-style: none;
-//     align-items:center;
-//     justify-items: center;
-//     font-family: 'Le Havre';
-//     font-size: 1.5vw;
-// `
-// S.Link = styled.li`
-//     height: 100%;
-//     padding: 0 5px;
-//     line-height: ${navHeight};
-//     box-sizing: border-box;
-//     :hover {
-//         background: white;
-//     }
-// `
+S.NavContainer = styled.div`
+    
+`

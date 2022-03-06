@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import C from '../colors'
+import C from './../util/colors'
 const Logo = () => {
   return (
-    <S.LogoContainer>
+    <S.LogoContainer id='Logo'>
         <S.LogoTop>
             LUNDIN
         </S.LogoTop>
@@ -23,7 +23,12 @@ S.LogoContainer = styled.div`
     text-align: center;
     display: grid;
     justify-items: center;
-    color: ${C.Dark};
+    color: ${C.Logo};
+    position: relative;
+    z-index: 50;
+    width: fit-content;
+    margin: auto;
+    transition: 250ms;
 `
 S.LogoTop = styled.div`
     font-weight: bold;

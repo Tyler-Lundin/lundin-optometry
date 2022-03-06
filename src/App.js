@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import Footer from './components/Footer';
 import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
-import { Route, Routes } from 'react-router-dom';
 const S = {}
 
 S.App = styled.div`
@@ -14,9 +14,8 @@ function App() {
   return (
     <S.App>
       <Nav/>
-      <Routes>
-        <Route path='/' element={<HomePage/>}/>
-      </Routes>
+      <HomePage/>
+      <Footer/>
     </S.App>
   );
 }

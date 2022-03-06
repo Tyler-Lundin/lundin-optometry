@@ -1,27 +1,29 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Logo from '../components/Logo'
-import C from '../colors'// colors
+import C from './../util/colors'
 import AboutUs from './AboutUs'
-import {AiFillEye} from 'react-icons/ai'
-import { infoHover } from '../keyframes'
+import Information from './Information'
+import ContactUs from './ContactUs'
 const HomePage = () => {
-  const [showInfo, setShowInfo] = useState(true)
   return (
     <>
       {/* HERO */}
-      <S.HomePage>
+      <S.HomePage id='HomePage'>
         <S.Hero id='HomePage-Hero'>
           <div>
             <Logo/>
-            <S.Address> 1221 S Hayford Rd, <br/> Spokane, WA 99224 </S.Address>
+            {/* <S.Address onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}> 1221 S Hayford Rd <br/> Spokane, WA 99224 </S.Address> */}
           </div>
           <S.CTA onClick={() => window.open('https://drbrucelundin.itrust.io/appointment')}>SCHEDULE EXAM</S.CTA>
+          <S.CTA onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}>DIRECTIONS</S.CTA>
           <S.SmallMessage>Inside the Walmart Vision Center</S.SmallMessage>
         </S.Hero>
+        <S.RadialGradient/>
       </S.HomePage>
       {/* SECTION 1 */}
-      
+      <Information/>
+      <ContactUs/>
       <AboutUs/>
     </>
   )
@@ -32,10 +34,35 @@ export default HomePage
 const S = {}
 
 // SECTION 1
-S.About = styled.div``
+S.About = styled.div`
+
+`
 
 // HERO
-S.SmallMessage = styled.h3`
+
+S.RadialGradient = styled.div`
+  /* transform: rotate(180deg); */
+	position: relative;
+  transform: translateY(-100%);
+  min-height: 700px;
+  height: 90vh;
+  box-shadow: 2px 2px 5px;
+	background: none;
+	filter: contrast(7);
+	--mask: linear-gradient(red, #{rgba(#000, .2)});
+	&::before {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		background: 
+			/* radial-gradient(orange, transparent) 0 0/ 1em 1em space; */
+      repeating-radial-gradient(circle, rgba(0,0,0,.05) 10px, transparent 80px);
+		-webkit-mask: var(--mask);
+						mask: var(--mask);
+		content: ''
+	}
+
+`
+S.SmallMessage = styled.h5`
   width: 100vw;
   position: absolute;
   top: 2%;
@@ -53,10 +80,7 @@ S.CTA = styled.button`
   font-weight: 700;
   background: ${C.Secondary};
   font-size: 2.5vh;
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index: 5;
   color: white;
   transition: 200ms;
   border-radius: 5px;
@@ -66,16 +90,22 @@ S.CTA = styled.button`
 `
 S.Hero = styled.div`
   width: 100vw;
+  min-height: 700px;
   height: 90vh;
   background: ${C.Primary};
   display: grid;
+  grid-auto-flow: row;
   align-items: center;
+  justify-items: center;
+  align-content: space-evenly
 `
 S.Address = styled.div`
   font-family: 'Roboto Mono';
   font-weight: 300;
   text-align: center;
   margin-bottom: 8vh;
+  position: relative;
+  z-index: 60;
   @media (max-width: 480px) { /* phone */
         font-size: 5vw;
     }
@@ -114,7 +144,9 @@ S.DividerLine = styled.div`
 `
 S.HomePage = styled.div`
   width: 100vw;
-  min-height: 90.5vh;
+  min-height: 700px;
+  height: 90.5vh;
   display: grid;
   background: ${C.Secondary};
+  scroll-snap-align: start;
 `
