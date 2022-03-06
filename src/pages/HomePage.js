@@ -41,6 +41,21 @@ const S = {}
 S.CTAs = styled.div`
   position: relative;
   z-index: 20;
+  @media (max-width: 480px) { /* phone */
+    font-size: 1.5vh;
+  }
+  @media (min-width: 481px) and (max-width: 768px) { /* tablet */
+    font-size: 1.8vh;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+    font-size: 2vh;
+  }
+  @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
+    font-size: 2.3vh;
+  }
+  @media (min-width: 1201px) { /* big screens */
+    font-size: 2.5vh;
+  }
 `
 S.AnchorCTA = styled.a`
     all: unset;
@@ -50,14 +65,13 @@ S.AnchorCTA = styled.a`
     font-family: 'Roboto Condensed';
     font-weight: 700;
     background: ${C.Secondary};
-    font-size: 2.5vh;
     z-index: 5;
     color: white;
     transition: 200ms;
     border-radius: 5px;
     display: inline-block;
     width: fit-content;
-    margin: 0 10px;
+    margin: 0 6px;
     :hover {
       cursor: pointer;
       transform: translateY(-5%);
@@ -70,7 +84,6 @@ S.CTA = styled.button`
   font-family: 'Roboto Condensed';
   font-weight: 700;
   background: ${C.Secondary};
-  font-size: 2.5vh;
   z-index: 5;
   color: white;
   transition: 200ms;
@@ -78,7 +91,7 @@ S.CTA = styled.button`
   :hover {
     transform: translateY(-5%);
   }
-  margin: 0 10px;
+  margin: 0 6px;
   
 `
 
