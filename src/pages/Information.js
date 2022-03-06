@@ -108,6 +108,7 @@ S.Row = styled.div`
 `
 S.RowTitle = styled.div`
     width: fit-content;
+    font-family: 'roboto-condensed';
     height: 2rem;
     font-size: 1.5rem;
     justify-self: right;
