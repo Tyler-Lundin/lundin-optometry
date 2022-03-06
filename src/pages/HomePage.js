@@ -33,7 +33,7 @@ const HomePage = () => {
           <S.CTAs>
             <S.CTA onClick={ ()=> window.open('https://drbrucelundin.itrust.io/appointment')}>SCHEDULE EXAM</S.CTA>
             <S.CTA onClick={ ()=> window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}>DIRECTIONS</S.CTA>
-            <S.AnchorCTA href='tel:5094590619' onClick={handleCallUs}>CALL US</S.AnchorCTA>
+            <S.AnchorCTA href='tel:5094590619'>CALL US</S.AnchorCTA>
           </S.CTAs>
           <S.SmallMessage>Inside the Walmart Vision Center</S.SmallMessage>
         </S.Hero>
