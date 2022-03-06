@@ -87,33 +87,38 @@ S.Rows = styled.div`
     width: 100%;
     justify-content: center;
     justify-items:center ;
+    
 `
 S.Row = styled.div`
     width: fit-content;
     text-align: center;
-    font-size: 1.2rem;
     font-family: 'le-havre';
     display: grid;
     width:100%;
-    align-items: center;
+    align-items: baseline;
     @media (max-width: 480px) { /* phone */
     grid-template-columns: 3fr 1fr;
+    font-size: 1rem;
     
-}
-@media (min-width: 481px) and (max-width: 768px) { /* tablet */
-grid-template-columns: 3fr 1fr;
+    }
+    @media (min-width: 481px) and (max-width: 768px) { /* tablet */
+    grid-template-columns: 3fr 1fr;
+    font-size: 1rem;
 
-}
-@media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+    }
+    @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+    font-size: 1.1rem;
 
-grid-template-columns: 1fr 1fr;
-}
-@media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.3rem;
 
-}
-@media (min-width: 1201px) { /* big screens */
-grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1201px) { /* big screens */
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.3rem;
 
     }
 `
@@ -121,8 +126,22 @@ S.RowTitle = styled.div`
     width: fit-content;
     font-family: 'roboto-condensed';
     height: 2rem;
-    font-size: 1.3rem;
     justify-self: right;
+    @media (max-width: 480px) { /* phone */
+        font-size: 1rem;
+    }
+    @media (min-width: 481px) and (max-width: 768px) { /* tablet */
+        font-size: 1.1rem;
+    }
+    @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+        font-size: 1.3rem;
+    }
+    @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
+        font-size: 1.3rem;
+    }
+    @media (min-width: 1201px) { /* big screens */
+        font-size: 1.3rem;
+    }
 `
 
 S.SmallMessage = styled.div`
