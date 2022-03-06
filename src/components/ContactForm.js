@@ -18,7 +18,6 @@ const ContactForm = (props) => {
             console.log(key, value);
             finalData.push(value)
         }
-        finalData.pop()
         setDisableSubmit(true)
         submitForm(finalData[0], finalData[1], finalData[2])
     }
@@ -48,13 +47,18 @@ const ContactForm = (props) => {
                 <S.MessageInput type='text' name='message' rows={12}/>
             </S.MessageSection>
             <S.SendContainer>
-                {load && (
-                    <ReCAPTCHA
-                    sitekey="6LdtdLgeAAAAAGZJbOd8atEuTKBnwejtXef-sjjL"
-                    onChange={handleChange}
-                    />
-                )}
-                <S.Send type='submit' disabled={disableSubmit} style={ {opacity: disableSubmit ? '0.5' : '1'}}>SEND</S.Send>
+                {
+                    disableSubmit ?
+                    load && (
+                        <ReCAPTCHA
+                        sitekey="6LdtdLgeAAAAAGZJbOd8atEuTKBnwejtXef-sjjL"
+                        onChange={handleChange}
+                        />
+                    ) 
+                    :
+                    <S.Send type='submit' disabled={disableSubmit}>SEND</S.Send>
+                }
+                
             </S.SendContainer>
             
         </S.Form> 

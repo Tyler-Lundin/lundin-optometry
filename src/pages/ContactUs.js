@@ -14,7 +14,7 @@ const ContactUs = () => {
                     <S.Title>CONTACT US</S.Title>
                 </S.TitleContainer>
                 {
-                    !messageSent ?
+                    messageSent ?
                     <FormDisabled/>
                     :
                     <ContactForm setMessageSent={setMessageSent}/>
@@ -40,6 +40,7 @@ S.TitleContainer = styled.div`
 `
 S.ContactUs = styled.div`
     width: 100vw;
+    min-height: 696px;
     height: 94.5vh;
     background: whitesmoke;
 `
@@ -47,6 +48,7 @@ S.ContactUs = styled.div`
 S.Background = styled.div`
     background: ${C.Secondary};
     width: 100vw;
+    min-height: 700px;
     height: 95vh;
     scroll-snap-align: start;
 `

@@ -15,8 +15,12 @@ const HomePage = () => {
             <Logo/>
             {/* <S.Address onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}> 1221 S Hayford Rd <br/> Spokane, WA 99224 </S.Address> */}
           </div>
-          <S.CTA onClick={() => window.open('https://drbrucelundin.itrust.io/appointment')}>SCHEDULE EXAM</S.CTA>
-          <S.CTA onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}>DIRECTIONS</S.CTA>
+          
+          <S.CTAs>
+            <S.CTA onClick={() => window.open('https://drbrucelundin.itrust.io/appointment')}>SCHEDULE EXAM</S.CTA>
+            <S.CTA onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}>DIRECTIONS</S.CTA>
+            <S.AnchorCTA href='tel:5094590619'>CALL US</S.AnchorCTA>
+          </S.CTAs>
           <S.SmallMessage>Inside the Walmart Vision Center</S.SmallMessage>
         </S.Hero>
         <S.RadialGradient/>
@@ -34,8 +38,48 @@ export default HomePage
 const S = {}
 
 // SECTION 1
-S.About = styled.div`
-
+S.CTAs = styled.div`
+  position: relative;
+  z-index: 20;
+`
+S.AnchorCTA = styled.a`
+    all: unset;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    background: ${C.Secondary};
+    font-size: 2.5vh;
+    z-index: 5;
+    color: white;
+    transition: 200ms;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+    margin: 0 10px;
+    :hover {
+      cursor: pointer;
+      transform: translateY(-5%);
+    }
+`
+S.CTA = styled.button`
+  all: unset;
+  width: fit-content;
+  padding: 1rem;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  background: ${C.Secondary};
+  font-size: 2.5vh;
+  z-index: 5;
+  color: white;
+  transition: 200ms;
+  border-radius: 5px;
+  :hover {
+    transform: translateY(-5%);
+  }
+  margin: 0 10px;
+  
 `
 
 // HERO
@@ -71,23 +115,7 @@ S.SmallMessage = styled.h5`
   color: ${C.Secondary};
   text-align: center;
 `
-S.CTA = styled.button`
-  width: fit-content;
-  padding: 1rem;
-  border: none;
-  border-radius: none;
-  font-family: 'Roboto Condensed';
-  font-weight: 700;
-  background: ${C.Secondary};
-  font-size: 2.5vh;
-  z-index: 5;
-  color: white;
-  transition: 200ms;
-  border-radius: 5px;
-  :hover {
-    filter: invert();
-  }
-`
+
 S.Hero = styled.div`
   width: 100vw;
   min-height: 700px;
@@ -97,7 +125,7 @@ S.Hero = styled.div`
   grid-auto-flow: row;
   align-items: center;
   justify-items: center;
-  align-content: space-evenly
+  align-content: space-evenly;
 `
 S.Address = styled.div`
   font-family: 'Roboto Mono';

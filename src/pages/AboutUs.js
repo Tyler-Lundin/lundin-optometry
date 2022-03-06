@@ -129,6 +129,7 @@ S.AboutContainer = styled.div`
 `
 S.AboutUs = styled.div`
     width: 100vw;
+    min-height: 696px;
     height: 94.5vh;
     display: grid;
     grid-template-columns: 50vw;
@@ -140,6 +141,7 @@ S.AboutUs = styled.div`
 S.Background = styled.div`
     background: ${C.Secondary};
     width: 100vw;
+    min-height: 700px;
     height: 95vh;
     scroll-snap-align: start;
 
