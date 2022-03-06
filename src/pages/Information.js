@@ -95,8 +95,27 @@ S.Row = styled.div`
     font-family: 'le-havre';
     display: grid;
     width:100%;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
+    @media (max-width: 480px) { /* phone */
+    grid-template-columns: 3fr 1fr;
+    
+}
+@media (min-width: 481px) and (max-width: 768px) { /* tablet */
+grid-template-columns: 3fr 1fr;
+
+}
+@media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+
+grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
+grid-template-columns: 1fr 1fr;
+
+}
+@media (min-width: 1201px) { /* big screens */
+grid-template-columns: 1fr 1fr;
+
+    }
 `
 S.RowTitle = styled.div`
     width: fit-content;
