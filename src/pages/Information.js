@@ -50,7 +50,7 @@ const Information = () => {
                 <S.Section1 dark={true}>
                     <S.Rows>
                         <S.Row>
-                            <S.RowTitle>BASIC EYE EXAM</S.RowTitle>
+                            <S.RowTitle>Eye Exam</S.RowTitle>
                             $100.00
                             {/* | description of servicedescription of service | FOR GLASSES  */}
                         </S.Row>
