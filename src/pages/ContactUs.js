@@ -11,7 +11,7 @@ const ContactUs = () => {
         <S.Background id='ContactUs'>
             <S.ContactUs>
                 <S.TitleContainer>
-                    <S.Title>CONTACT US</S.Title>
+                    <S.Title>contact</S.Title>
                 </S.TitleContainer>
                 {
                     messageSent ?
@@ -31,7 +31,10 @@ const S = {}
 
 
 S.Title = styled.h1`
-    font-family: 'Bio Sans';
+    font-family: 'le-havre';
+    left: 5%;
+    position: absolute;
+    color: ${C.Secondary};
 `
 S.TitleContainer = styled.div`
     width: 100vw;
@@ -43,6 +46,8 @@ S.ContactUs = styled.div`
     min-height: 696px;
     height: 94.5vh;
     background: whitesmoke;
+    display: grid;
+    grid-template-rows: 30px 1fr;
 `
 
 S.Background = styled.div`

@@ -30,7 +30,7 @@ S.LogoContainer = styled.div`
     margin: auto;
     transition: 250ms;
 `
-S.LogoTop = styled.div`
+S.LogoTop = styled.h1`
     font-weight: bold;
     letter-spacing: 1rem;
     transform: translateX(1%);
@@ -52,7 +52,8 @@ S.LogoTop = styled.div`
     }
 `
 
-S.LogoBottom = styled.div`
+S.LogoBottom = styled.h1`
+    font-weight: 300;
     @media (max-width: 480px) { /* phone */
         font-size: 13vw;
     }

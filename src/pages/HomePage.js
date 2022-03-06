@@ -27,8 +27,8 @@ const HomePage = () => {
       </S.HomePage>
       {/* SECTION 1 */}
       <Information/>
-      <ContactUs/>
       <AboutUs/>
+      <ContactUs/>
     </>
   )
 }

@@ -209,7 +209,7 @@ S.Title = styled.h1`
 S.TitleContainer = styled.div`
     padding-top: 1rem;
     position: absolute;
-    left: 3%;
+    left: 5%;
     /* right: 50%;
     transform: translateX(50%); */
 `

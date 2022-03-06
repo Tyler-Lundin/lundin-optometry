@@ -8,7 +8,7 @@ const AboutUs = () => {
     return(
         <S.Background id='AboutUs' >
             <S.AboutUs>
-
+                <S.Heading>about</S.Heading>
                 <S.MainImage>
                     <img src={DrLundinImg} alt='Pic of Dr Lundin'/>
                 </S.MainImage>
@@ -126,6 +126,12 @@ S.AboutContainer = styled.div`
         font-size: 2rem;
         padding: 2rem;
     }
+`
+S.Heading = styled.h1`
+    font-family: 'le-havre';
+    position: absolute;
+    left: 5%;
+    color: ${C.Secondary};
 `
 S.AboutUs = styled.div`
     width: 100vw;

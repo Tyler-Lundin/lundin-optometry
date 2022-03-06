@@ -105,6 +105,8 @@ S.Input = styled.input`
 S.Label = styled.h2`
     font-family: 'roboto-condensed';
     text-align: left;
+    color: ${C.Secondary};
+
 `
 S.NameSection = styled.div`
     display: grid;
