@@ -86,13 +86,13 @@ S.ToggleOpen = styled.div`
 S.LinksContainer = styled.ul`
     height: 90%;
     display: grid;
-    font-family: 'Le Havre';
+    font-family: 'le-havre';
     align-items: center;
     @media (max-width: 480px) { /* phone */
-        font-size: 3vh;
+        font-size: 5vh;
     }
     @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 4vh;
+        font-size: 5vh;
     }
     @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
         font-size: 5vh;
