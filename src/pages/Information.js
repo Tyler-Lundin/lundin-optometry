@@ -55,13 +55,18 @@ const Information = () => {
                             {/* | description of servicedescription of service | FOR GLASSES  */}
                         </S.Row>
                         <S.Row>
-                            <S.RowTitle>STANDARD CONTACT LENS EXAM</S.RowTitle>
-                            $145.00
+                            <S.RowTitle>Contact Fitting Spherical</S.RowTitle>
+                            $150.00
                             {/* | description of service | FOR CONTACT LENS and GLASSES */}
                         </S.Row>
                         <S.Row>
-                            <S.RowTitle>SPECIAL CONTACT LENS EXAM</S.RowTitle>
-                            $175.00
+                            <S.RowTitle>Contact Fitting Astigmatism / Bifocal</S.RowTitle>
+                            $170.00
+                            {/* | ROUTINE EYE EXAM | FOR SPECIAL CONTACT LENS and GLASSES */}
+                        </S.Row>
+                        <S.Row>
+                            <S.RowTitle>Contact Fitting RGP</S.RowTitle>
+                            $200.00
                             {/* | ROUTINE EYE EXAM | FOR SPECIAL CONTACT LENS and GLASSES */}
                         </S.Row>
                     </S.Rows>
@@ -89,7 +94,8 @@ S.Row = styled.div`
     font-size: 1.2rem;
     font-family: 'le-havre';
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 `
 S.RowTitle = styled.div`

@@ -20,6 +20,7 @@ const ContactForm = (props) => {
         }
         setDisableSubmit(true)
         submitForm(finalData[0], finalData[1], finalData[2])
+
     }
     const handleChange = () => {
         setDisableSubmit(false)
@@ -34,24 +35,24 @@ const ContactForm = (props) => {
         <S.Form onSubmit={handleSubmit}>
             <S.NameSection>
                 <S.Label>NAME</S.Label>
-                <S.Input type='text' name='name'/>
+                <S.Input type='text' name='name' required/>
             </S.NameSection>
 
             <S.SenderSection>
                 <S.Label>EMAIL</S.Label>
-                <S.Input type='email' name='email'/>
+                <S.Input type='email' name='email' required/>
             </S.SenderSection>
 
             <S.MessageSection id='MessageSection'>
                 <S.Label>MESSAGE</S.Label>
-                <S.MessageInput type='text' name='message' rows={12}/>
+                <S.MessageInput type='text' name='message' rows={12} required/>
             </S.MessageSection>
             <S.SendContainer>
                 {
                     disableSubmit ?
                     load && (
                         <ReCAPTCHA
-                        sitekey="6LdtdLgeAAAAAGZJbOd8atEuTKBnwejtXef-sjjL"
+                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                         onChange={handleChange}
                         />
                     ) 
@@ -65,6 +66,7 @@ const ContactForm = (props) => {
     )
 }
 // "6LdtdLgeAAAAAGZJbOd8atEuTKBnwejtXef-sjjL"
+
 export default ContactForm
 
 const S = {}
