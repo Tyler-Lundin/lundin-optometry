@@ -52,7 +52,7 @@ const ContactForm = (props) => {
                     disableSubmit ?
                     load && (
                         <ReCAPTCHA
-                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                        sitekey="6LdtdLgeAAAAAGZJbOd8atEuTKBnwejtXef-sjjL"
                         onChange={handleChange}
                         />
                     ) 
@@ -65,7 +65,7 @@ const ContactForm = (props) => {
         </S.Form> 
     )
 }
-// "6LdtdLgeAAAAAGZJbOd8atEuTKBnwejtXef-sjjL"
+// 
 
 export default ContactForm
 
