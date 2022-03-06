@@ -10,7 +10,7 @@ const Information = () => {
                 <S.Title color={'white'}>insurance</S.Title>
             </S.TitleContainer>
                 <S.Section>
-                    <S.SectionTitle color={C.Primary}>Insurance We Accept</S.SectionTitle>
+                    <S.SectionTitle color={C.Primary}>Accepted</S.SectionTitle>
                     <S.List>
                         <S.ListItem>TRICARE</S.ListItem>
                         <S.ListItem>MEDICARE</S.ListItem>
@@ -28,26 +28,12 @@ const Information = () => {
                     </S.List>
                 </S.Section>
                 <S.Section>
-                    <S.SectionTitle color={C.Primary}>Insurance We Don't Accept</S.SectionTitle>
+                    <S.SectionTitle color={C.Primary}>Not Accept</S.SectionTitle>
                     <S.List>
                         <S.ListItem>AETNA</S.ListItem>
                         <S.ListItem>LOREM</S.ListItem>
                         <S.ListItem>IPSUM</S.ListItem>
                         <S.ListItem>THORO</S.ListItem>
-                        <S.ListItem>FREYA</S.ListItem>
-                        <S.ListItem>FLOKI</S.ListItem>
-                        <S.ListItem>ALICER</S.ListItem>
-                        <S.ListItem>COUNTRY</S.ListItem>
-                        <S.ListItem>SOMTIN</S.ListItem>
-                        <S.ListItem>AETNA</S.ListItem>
-                        <S.ListItem>LOREM</S.ListItem>
-                        <S.ListItem>IPSUM</S.ListItem>
-                        <S.ListItem>THORO</S.ListItem>
-                        <S.ListItem>FREYA</S.ListItem>
-                        <S.ListItem>FLOKI</S.ListItem>
-                        <S.ListItem>ALICER</S.ListItem>
-                        <S.ListItem>COUNTRY</S.ListItem>
-                        <S.ListItem>SOMTIN</S.ListItem>
                     </S.List>
                 </S.Section>
             </S.Insurance>

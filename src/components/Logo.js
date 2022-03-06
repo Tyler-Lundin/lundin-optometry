@@ -36,10 +36,10 @@ S.LogoTop = styled.div`
     transform: translateX(1%);
     margin-bottom: -4%;
     @media (max-width: 480px) { /* phone */
-        font-size: 19vw;
+        font-size: 15vw;
     }
     @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 17vw;
+        font-size: 15vw;
     }
     @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
         font-size: 15vw;
@@ -54,10 +54,10 @@ S.LogoTop = styled.div`
 
 S.LogoBottom = styled.div`
     @media (max-width: 480px) { /* phone */
-        font-size: 17vw;
+        font-size: 13vw;
     }
     @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 15vw;
+        font-size: 13vw;
     }
     @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
         font-size: 13vw;
