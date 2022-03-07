@@ -2,9 +2,7 @@ import React, {lazy, Suspense} from 'react'
 import styled from 'styled-components'
 import Logo from '../components/Logo'
 import C from './../util/colors'
-// import AboutUs from './AboutUs'
-import Information from './Information'
-// import ContactUs from './ContactUs'
+const Information = lazy( () => import('./Information'))
 const AboutUs = lazy( () => import('./AboutUs'))
 const ContactUs = lazy( () => import('./ContactUs'))
 
