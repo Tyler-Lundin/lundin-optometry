@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import styled from 'styled-components'
 import Logo from '../components/Logo'
 import C from './../util/colors'
-import AboutUs from './AboutUs'
+// import AboutUs from './AboutUs'
 import Information from './Information'
-import ContactUs from './ContactUs'
+// import ContactUs from './ContactUs'
+const AboutUs = lazy( () => import('./AboutUs'))
+const ContactUs = lazy( () => import('./ContactUs'))
+
+const renderLoader = () => <p>Loading</p>;
+
 const HomePage = () => {
 
 
@@ -29,8 +34,13 @@ const HomePage = () => {
       </S.HomePage>
       {/* SECTION 1 */}
       <Information/>
-      <AboutUs/>
-      <ContactUs/>
+      <Suspense fallback={renderLoader()}>
+        <AboutUs/>
+      </Suspense>
+      <Suspense fallback={renderLoader()}>
+        <ContactUs/>
+      </Suspense>
+
     </>
   )
 }
