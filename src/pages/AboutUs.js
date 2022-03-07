@@ -12,7 +12,9 @@ const AboutUs = () => {
             <S.AboutUs>
                 <S.Heading>about</S.Heading>
                 <S.MainImage>
-                    <img 
+                    <img
+                        width='599px'
+                        height='757px'
                         src={mediumImg} 
                         srcSet={`${smallImg} 454w, ${mediumImg} 599w, ${largeImg} 908w`} 
                         alt='Pic of Dr Lundin'
@@ -123,15 +125,7 @@ S.AboutContainer = styled.div`
         font-size: 1.7rem;
         padding: 2rem;
     }
-    @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
-        font-size: 2rem;
-        padding: 2rem;
-    }
-    @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
-        font-size: 2rem;
-        padding: 2rem;
-    }
-    @media (min-width: 1201px) { /* big screens */
+    @media (min-width: 769px){ /* laptop */
         font-size: 2rem;
         padding: 2rem;
     }

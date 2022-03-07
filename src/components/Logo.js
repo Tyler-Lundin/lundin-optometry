@@ -35,13 +35,7 @@ S.LogoTop = styled.h1`
     letter-spacing: 1rem;
     transform: translateX(1%);
     margin-bottom: -4%;
-    @media (max-width: 480px) { /* phone */
-        font-size: 15vw;
-    }
-    @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 15vw;
-    }
-    @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+    @media (max-width: 1024px)  { /* phone */
         font-size: 15vw;
     }
     @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
@@ -54,13 +48,7 @@ S.LogoTop = styled.h1`
 
 S.LogoBottom = styled.h1`
     font-weight: 300;
-    @media (max-width: 480px) { /* phone */
-        font-size: 13vw;
-    }
-    @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 13vw;
-    }
-    @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
+    @media(max-width: 1024px) { /* laptop */
         font-size: 13vw;
     }
     @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */

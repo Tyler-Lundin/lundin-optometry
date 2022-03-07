@@ -127,7 +127,7 @@ S.RadialGradient = styled.div`
 	}
 
 `
-S.SmallMessage = styled.h5`
+S.SmallMessage = styled.p`
   width: 100vw;
   position: absolute;
   top: 2%;
