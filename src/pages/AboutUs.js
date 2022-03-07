@@ -10,7 +10,6 @@ const AboutUs = () => {
     return(
         <S.Background id='AboutUs' >
             <S.AboutUs>
-                <S.Heading>about</S.Heading>
                 <S.MainImage>
                     <img
                         width='599px'
@@ -23,6 +22,7 @@ const AboutUs = () => {
                 </S.MainImage>
 
                 <S.AboutContainer>
+                <S.Heading>about</S.Heading>
                     <S.Title><span>Dr </span><span id='brucelundintitle'>Bruce<br/>Lundin</span></S.Title>
                     <S.Desc>
                         Bruce Lundin has been doing 
@@ -113,6 +113,7 @@ S.AboutContainer = styled.div`
     width: 60vw;
     height: 80vh;
     display: grid;
+    grid-template-rows: 80px .3fr 2fr 1fr;
     justify-items: right;
     right: 5px;
     top: 50%;
@@ -132,9 +133,8 @@ S.AboutContainer = styled.div`
 `
 S.Heading = styled.h1`
     font-family: 'le-havre';
-    position: absolute;
-    right: 5%;
     transform: translateY(10px);
+    height: fit-content;
     color: ${C.Secondary};
 `
 S.AboutUs = styled.div`
