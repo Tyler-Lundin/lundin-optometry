@@ -27,7 +27,6 @@ const HomePage = () => {
         <S.Hero id='HomePage-Hero'>
           <div>
             <Logo/>
-            {/* <S.Address onClick={()=>window.open('https://www.google.com/maps/dir//1221+S+Hayford+Rd+Spokane,+WA+99224/')}> 1221 S Hayford Rd <br/> Spokane, WA 99224 </S.Address> */}
           </div>
           
           <S.CTAs>
@@ -76,7 +75,7 @@ S.AnchorCTA = styled.a`
     width: 100%;
     height: 100%;
     padding: 1rem;
-    font-family: 'Roboto Condensed';
+    font-family: 'roboto-condensed';
     font-weight: 700;
     background: ${C.Secondary};
     z-index: 5;
@@ -95,7 +94,7 @@ S.CTA = styled.button`
   all: unset;
   width: fit-content;
   padding: 1rem;
-  font-family: 'Roboto Condensed';
+  font-family: 'roboto-condensed';
   font-weight: 700;
   background: ${C.Secondary};
   z-index: 5;
@@ -137,7 +136,7 @@ S.SmallMessage = styled.h5`
   width: 100vw;
   position: absolute;
   top: 2%;
-  font-family: 'Bio Sans';
+  font-family: 'bio-sans';
   font-style: italic;
   color: ${C.Secondary};
   text-align: center;
@@ -153,29 +152,6 @@ S.Hero = styled.div`
   align-items: center;
   justify-items: center;
   align-content: space-evenly;
-`
-S.Address = styled.div`
-  font-family: 'Roboto Mono';
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 8vh;
-  position: relative;
-  z-index: 60;
-  @media (max-width: 480px) { /* phone */
-        font-size: 5vw;
-    }
-    @media (min-width: 481px) and (max-width: 768px) { /* tablet */
-        font-size: 3vw;
-    }
-    @media (min-width: 769px) and (max-width: 1024px) { /* laptop */
-        font-size: 2vw;
-    }
-    @media (min-width: 1025px) and (max-width: 1200px){ /* desktop */
-        font-size: 2vw;
-    }
-    @media (min-width: 1201px) { /* big screens */
-        font-size: 1.5vw;
-    }
 `
 S.DividerLine = styled.div`
   height: 1px;
