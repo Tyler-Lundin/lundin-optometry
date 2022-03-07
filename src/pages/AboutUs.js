@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import C from './../util/colors'
-import smallImg from './../images/454x573.jpg'
-import mediumImg from './../images/599x757.jpg'
-import largeImg from './../images/908x1147.jpg'
+import smallImg from './../images/454w588h.jpg'
+import mediumImg from './../images/599w776h.jpg'
+import largeImg from './../images/908w1175h.jpg'
 const AboutUs = () => {
 
 
@@ -101,7 +101,7 @@ S.Title = styled.div`
         margin-right: 1rem;
     }
     #brucelundintitle{
-        text-align: left;
+        text-align: right;
         display: grid;
         line-height: 80%;
         font-size: 100%;
@@ -133,7 +133,8 @@ S.AboutContainer = styled.div`
 S.Heading = styled.h1`
     font-family: 'le-havre';
     position: absolute;
-    left: 5%;
+    right: 5%;
+    transform: translateY(10px);
     color: ${C.Secondary};
 `
 S.AboutUs = styled.div`
