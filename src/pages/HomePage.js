@@ -5,20 +5,9 @@ import C from './../util/colors'
 import AboutUs from './AboutUs'
 import Information from './Information'
 import ContactUs from './ContactUs'
-// import { analytics } from '../util/firebase'
-// import { logEvent } from 'firebase/analytics'
 const HomePage = () => {
 
-  // const handleScheduleExam = () => {
-    
-  //   logEvent(analytics, 'cta_schedule_exam')
-  // }
-  // const handleDirections = () => {
-  //   logEvent(analytics, 'cta_directions')
-  // }
-  // const handleCallUs = () => {
-  //   logEvent(analytics, 'cta_call_us')
-  // }
+
 
   return (
     <>
@@ -89,6 +78,9 @@ S.AnchorCTA = styled.a`
       cursor: pointer;
       transform: translateY(-5%);
     }
+    :focus{
+      outline: white 3px solid;
+    }
 `
 S.CTA = styled.button`
   all: unset;
@@ -103,6 +95,9 @@ S.CTA = styled.button`
   border-radius: 5px;
   :hover {
     transform: translateY(-5%);
+  }
+  :focus{
+    outline: white 3px solid;
   }
   margin: 0 6px;
   

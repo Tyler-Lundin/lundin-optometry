@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import C from './../util/colors'
-import DrLundinImg from './../images/cleanedupErasedEdges.png'
+import smallImg from './../images/454x573.jpg'
+import mediumImg from './../images/599x757.jpg'
+import largeImg from './../images/908x1147.jpg'
 const AboutUs = () => {
 
 
@@ -10,7 +12,12 @@ const AboutUs = () => {
             <S.AboutUs>
                 <S.Heading>about</S.Heading>
                 <S.MainImage>
-                    <img src={DrLundinImg} alt='Pic of Dr Lundin'/>
+                    <img 
+                        src={mediumImg} 
+                        srcSet={`${smallImg} 454w, ${mediumImg} 599w, ${largeImg} 908w`} 
+                        alt='Pic of Dr Lundin'
+                        sizes='(max-width: 500px) 600px, 599w'
+                    />
                 </S.MainImage>
 
                 <S.AboutContainer>
@@ -54,7 +61,9 @@ S.ContactBruce = styled.div`
         text-decoration: none;
         cursor: pointer;
         color: ${C.Secondary};
-        
+        :focus{
+            outline: red 3px solid;
+        }
     }
 `
 

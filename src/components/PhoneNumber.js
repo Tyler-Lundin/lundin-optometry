@@ -26,6 +26,9 @@ S.PhoneNumber = styled.a`
         cursor: pointer;
         color: white;
     }
+    :focus{
+      outline: white 3px solid;
+    }
 `
 S.PhoneNumberContainer = styled.div`
     display: grid;

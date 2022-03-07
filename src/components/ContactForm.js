@@ -34,18 +34,18 @@ const ContactForm = (props) => {
     return (
         <S.Form onSubmit={handleSubmit}>
             <S.NameSection>
-                <S.Label>NAME</S.Label>
-                <S.Input type='text' name='name' required/>
+                <S.Label htmlFor='name_input'>NAME</S.Label>
+                <S.Input id='name_input' type='text' name='name' required/>
             </S.NameSection>
 
             <S.SenderSection>
-                <S.Label>EMAIL</S.Label>
-                <S.Input type='email' name='email' required/>
+                <S.Label htmlFor='email_input'>EMAIL</S.Label>
+                <S.Input id='email_input' type='email' name='email' required/>
             </S.SenderSection>
 
             <S.MessageSection id='MessageSection'>
-                <S.Label>MESSAGE</S.Label>
-                <S.MessageInput type='text' name='message' rows={12} required/>
+                <S.Label htmlFor='message_input'>MESSAGE</S.Label>
+                <S.MessageInput id='message_input' type='text' name='message' rows={12} required/>
             </S.MessageSection>
             <S.SendContainer>
                 {
@@ -82,6 +82,9 @@ S.Send = styled.button`
     font-size: 150%;
     font-family: 'bio-sans';
     text-align: center;
+    :focus{
+      outline: red 3px solid;
+    }
 `
 
 S.Form = styled.form`
@@ -104,7 +107,7 @@ S.Input = styled.input`
     justify-self: center;
 
 `
-S.Label = styled.h2`
+S.Label = styled.label`
     font-family: 'roboto-condensed';
     text-align: left;
     color: ${C.Secondary};

@@ -20,7 +20,7 @@ const Nav = () => {
             <S.ToggleOpen onClick={()=>handleToggle()}>
                 <IoIosClose size={'100%'} color='white'/>
             </S.ToggleOpen>
-            <S.LinksContainer>
+            <S.LinksContainer isMenuOpen={isMenuOpen}>
                 <S.ListItem>
                     <a href='#HomePage' onClick={handleLink}>HOME</a>
                 </S.ListItem>
@@ -50,9 +50,20 @@ const togglePadding = '2vw'
 // Animations
 const openNav = keyframes`
     from {
-        transform: translateX(-110%);
+        transform: translateX(110%);
     }
     to {
+        transform: translateX(0%);
+    }
+`
+const linksOnOpen = keyframes`
+    0% {
+        transform: translateX(3%);
+    }
+    50% {
+        transform: translateX(-3%);
+    }
+    100% {
         transform: translateX(0%);
     }
 `
@@ -61,7 +72,7 @@ const closeNav = keyframes`
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-110%);
+        transform: translateX(110%);
     }
 `
 // MOBILE
@@ -86,8 +97,12 @@ S.ToggleOpen = styled.div`
 S.LinksContainer = styled.ul`
     height: 90%;
     display: grid;
+    list-style: none;
     font-family: 'le-havre';
     align-items: center;
+    transform: translateX(7%);
+    animation: ${props=>!props.isMenuOpen ? linksOnOpen:'none'} 1s normal forwards;
+    animation-delay: 600ms;
     @media (max-width: 480px) { /* phone */
         font-size: 5vh;
     }
@@ -108,31 +123,6 @@ S.ListItem = styled.li`
     text-align:center ;
     a {
         all: unset;
-    }
-    ::before {
-        content: '→';
-        color: ${C.Primary};
-        position: relative;
-        z-index: 200;
-        position: absolute;
-        transform: translateX(-110%);
-        opacity: 0;
-        transition: 250ms;
-    }
-    ::after {
-        content: '←';
-        color: ${C.Primary};
-        position: relative;
-        z-index: 200;
-        position: absolute;
-        transform: translateX(10%);
-        opacity: 0;
-        transition: 250ms;
-    }
-    :hover {
-        ::before, ::after {
-            opacity: 1;
-        }
     }
 `
 S.NavContainer = styled.div`
