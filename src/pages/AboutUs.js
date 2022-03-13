@@ -25,11 +25,12 @@ const AboutUs = () => {
                 <S.Heading>about</S.Heading>
                     <S.Title><span>Dr </span><span id='brucelundintitle'>Bruce<br/>Lundin</span></S.Title>
                     <S.Desc>
+                        <span className='italic'>The Eye Doctor <br/></span>
                         Bruce Lundin has been doing 
                         Optometry for 22 years, graduating from Pacific University 
                         College of Optometry in the year 2000.
                         Bruce is a big family man, 
-                        welcoming his latest of 7 kids in 2022. 
+                        welcoming his latest of 7 kids in 2022.
                     </S.Desc>
                     <S.ContactBruce>
                         <a href="mailto:bruceeyeguy@gmail.com">Email Dr Lundin</a>
@@ -87,6 +88,9 @@ S.Desc = styled.div`
     font-family: 'le-havre';
     max-width: 70%;
     text-align: right;
+    .italic {
+        font-style: italic;
+    }
     
 `
 S.Title = styled.div`
@@ -131,7 +135,7 @@ S.AboutContainer = styled.div`
         padding: 2rem;
     }
 `
-S.Heading = styled.h1`
+S.Heading = styled.h2`
     font-family: 'le-havre';
     transform: translateY(10px);
     height: fit-content;
