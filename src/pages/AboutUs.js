@@ -135,7 +135,7 @@ S.AboutContainer = styled.div`
         padding: 2rem;
     }
 `
-S.Heading = styled.h2`
+S.Heading = styled.h4`
     font-family: 'le-havre';
     transform: translateY(10px);
     height: fit-content;
