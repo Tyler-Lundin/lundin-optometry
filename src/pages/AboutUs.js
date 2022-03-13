@@ -79,7 +79,7 @@ S.MainImage = styled.div`
     overflow-x: visible;
     img {
         /* width: 100%; */
-        height: 94.5vh;
+        height: 100%;
         /* position: center; */
         /* object-fit: cover; */
     }
@@ -120,8 +120,6 @@ S.AboutContainer = styled.div`
     grid-template-rows: 80px .3fr 2fr 1fr;
     justify-items: right;
     right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
     @media (max-width: 480px) { /* phone */
         font-size: 1.3rem;
         padding: 1rem;
